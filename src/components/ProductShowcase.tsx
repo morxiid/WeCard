@@ -94,7 +94,7 @@ const ProductShowcase: React.FC = () => {
                         {/* Front of card */}
                         <div className="absolute inset-0 w-full h-full backface-hidden">
                           <img 
-                            src="/Standard side1 png.png" 
+                            src={product.frontImage} 
                             alt="WeCard Front"
                             className="w-full h-full object-cover rounded-xl shadow-2xl"
                           />
@@ -103,7 +103,7 @@ const ProductShowcase: React.FC = () => {
                         {/* Back of card */}
                         <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
                           <img 
-                            src="/Standard side2 png.png" 
+                            src={product.backImage} 
                             alt="WeCard Back"
                             className="w-full h-full object-cover rounded-xl shadow-2xl"
                           />
