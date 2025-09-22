@@ -47,7 +47,7 @@ const InteractiveDemo: React.FC = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Demo Stage */}
-          <div className="relative h-96 md:h-96 flex flex-col md:flex-row items-center justify-center space-y-12 md:space-y-0">
+          <div className="relative h-96 md:h-96 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0">
             
             {/* WeCard */}
             <div 
@@ -56,7 +56,7 @@ const InteractiveDemo: React.FC = () => {
               }`}
               onClick={handleCardTap}
             >
-              <div className="relative w-40 h-24 md:w-64 md:h-40 perspective-1000 mb-4 md:mb-0 -mt-8 md:mt-0">
+              <div className="relative w-40 h-24 md:w-64 md:h-40 perspective-1000 mb-2 md:mb-0 -mt-4 md:mt-0">
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d">
                   <div className="absolute inset-0 w-full h-full backface-hidden">
                     <img 
@@ -78,7 +78,7 @@ const InteractiveDemo: React.FC = () => {
               </div>
               
               {!isNearCard && (
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center md:block hidden">
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-center md:block hidden">
                   <div className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-gray-300 animate-pulse">
                     Tap to connect
                   </div>
@@ -94,7 +94,7 @@ const InteractiveDemo: React.FC = () => {
             >
               <div className="relative">
                 {/* Phone Frame */}
-                <div className="w-40 h-64 md:w-48 md:h-80 bg-gray-900 rounded-3xl p-2 shadow-2xl border border-gray-700">
+                <div className="w-40 h-64 md:w-48 md:h-80 bg-gray-900 rounded-3xl p-2 shadow-2xl border border-gray-700 -mt-2 md:mt-0">
                   <div className="w-full h-full bg-black rounded-2xl relative overflow-hidden">
                     
                     {/* Phone Screen - Default State */}
