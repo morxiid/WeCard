@@ -27,8 +27,8 @@ const ProductShowcase: React.FC = () => {
       icon: <Star className="w-6 h-6" />,
       gradient: "from-blue-500/20 to-cyan-500/20",
       popular: true,
-      frontImage: "/wecardStandard-front.png",
-      backImage: "/wecardStandard-back.png",
+      frontImage: "/wecardStandard-Front.png",
+      backImage: "/wecardStandard-Back.png",
       order: "https://wa.me/p/23912719188420118/212681784088"
     },
     {
@@ -40,8 +40,8 @@ const ProductShowcase: React.FC = () => {
       icon: <MessageSquare className="w-6 h-6" />,
       gradient: "from-cyan-500/20 to-purple-500/20",
       popular: false,
-      frontImage: "/GoogleReview-back.png ",
-      backImage: "/GoogleReview-front.png",
+      frontImage: "/GoogleReview-Front.png",
+      backImage: "/GoogleReview-Back.png",
       order: "https://wa.me/p/24199588673006757/212681784088"
     }
   ];
