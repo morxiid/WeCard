@@ -16,7 +16,7 @@ const ProductShowcase: React.FC = () => {
       popular: false,
       frontImage: "/wecardPro-1-2.png",
       backImage: "/wecardPro-1-2.png",
-      order: "https://wa.me/p/24352358697728014/212681784088"
+      order: "https://wa.me/p/23912719188420118/212681784088"
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ const ProductShowcase: React.FC = () => {
       popular: true,
       frontImage: "/wecardStandard-Front.png",
       backImage: "/wecardStandard-Back.png",
-      order: "https://wa.me/p/23912719188420118/212681784088"
+      order: "https://wa.me/p/24352358697728014/212681784088"
     },
     {
       id: 3,
