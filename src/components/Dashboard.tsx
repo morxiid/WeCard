@@ -67,10 +67,10 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
 
-            <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+            <a href="https://e-card.space/"><button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center space-x-2">
               <span>Explore Full Dashboard</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </button></a>
           </div>
 
           {/* Right Side - Dashboard Screenshots Placeholder */}
