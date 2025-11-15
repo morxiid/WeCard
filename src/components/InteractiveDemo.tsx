@@ -133,33 +133,137 @@ const InteractiveDemo: React.FC = () => {
                         <div className={`transition-all duration-1000 ${showProfile ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                           <div className="text-black p-2 h-full">
                             {/* Profile Header */}
-                            <div className="text-center mb-3 bg-gradient-to-r from-purple-500 to-blue-500 p-3 rounded-t-lg">
-                              <div className="w-16 h-16 bg-white rounded-full mx-auto mb-2 flex items-center justify-center shadow-lg">
-                                <span className="text-purple-600 font-bold text-xl">M</span>
+                            <div className="text-center mb-3 bg-gradient-to-br from-gray-900 to-gray-800 p-4 rounded-lg relative overflow-hidden">
+                              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
+                              <div className="relative z-10">
+                                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full mx-auto mb-3 flex items-center justify-center shadow-xl border-4 border-white">
+                                  <span className="text-white font-bold text-2xl">M</span>
+                                </div>
+                                <h3 className="font-bold text-xl text-white mb-1">Morchiid</h3>
+                                <p className="text-sm text-gray-200 mb-2">Creative Professional & Designer</p>
+                                <p className="text-xs text-gray-300">Marrakesh, Morocco</p>
                               </div>
-                              <h3 className="font-bold text-lg text-white">Morchiid</h3>
-                              <p className="text-sm text-purple-100">Creative Professional</p>
                             </div>
 
                             {/* Contact Info */}
-                            <div className="space-y-2 mb-3 px-2">
-                              <div className="flex items-center space-x-2 text-xs bg-gray-50 p-2 rounded-lg">
+                            <div className="space-y-2 mb-4 px-1">
+                              <div className="flex items-center space-x-3 text-xs bg-gray-50 p-3 rounded-lg shadow-sm">
                                 <Mail className="w-4 h-4 text-purple-500" />
-                                <span>contact@morchiid.com</span>
+                                <span className="font-medium">info.wecard@gmail.com</span>
                               </div>
-                              <div className="flex items-center space-x-2 text-xs bg-gray-50 p-2 rounded-lg">
+                              <div className="flex items-center space-x-3 text-xs bg-gray-50 p-3 rounded-lg shadow-sm">
                                 <Phone className="w-4 h-4 text-blue-500" />
-                                <span>+1 (555) 987-6543</span>
+                                <span className="font-medium">+212 681 784 088</span>
                               </div>
-                              <div className="flex items-center space-x-2 text-xs bg-gray-50 p-2 rounded-lg">
+                              <div className="flex items-center space-x-3 text-xs bg-gray-50 p-3 rounded-lg shadow-sm">
                                 <Globe className="w-4 h-4 text-green-500" />
-                                <span>morchiid.portfolio.com</span>
+                                <span className="font-medium">wecard.ma</span>
+                              </div>
+                              <div className="flex items-center space-x-3 text-xs bg-gray-50 p-3 rounded-lg shadow-sm">
+                                <MapPin className="w-4 h-4 text-red-500" />
+                                <span className="font-medium">Marrakesh, Morocco</span>
+                              </div>
+                            </div>
+
+                            {/* Services/Skills */}
+                            <div className="mb-4 px-1">
+                              <h4 className="font-semibold text-sm mb-2 text-gray-800">Services</h4>
+                              <div className="flex flex-wrap gap-1">
+                                <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-medium">NFC Cards</span>
+                                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">Design</span>
+                                <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Branding</span>
                               </div>
                             </div>
 
                             {/* Social Links */}
-                            <div className="flex justify-center space-x-2 mb-3 px-2">
-                              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shadow-md">
+                            <div className="mb-4 px-1">
+                              <h4 className="font-semibold text-sm mb-2 text-gray-800">Connect</h4>
+                              <div className="flex justify-center space-x-3">
+                                <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                                  <Instagram className="w-5 h-5 text-white" />
+                                </div>
+                                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                                  <Linkedin className="w-5 h-5 text-white" />
+                                </div>
+                                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                                  <Globe className="w-5 h-5 text-white" />
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Quick Actions */}
+                            <div className="grid grid-cols-2 gap-2 mb-3 px-1">
+                              <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white py-2 px-3 rounded-lg text-xs font-semibold shadow-lg flex items-center justify-center space-x-1">
+                                <User className="w-3 h-3" />
+                                <span>Save Contact</span>
+                              </button>
+                              <button className="bg-gradient-to-r from-green-500 to-teal-500 text-white py-2 px-3 rounded-lg text-xs font-semibold shadow-lg flex items-center justify-center space-x-1">
+                                <Phone className="w-3 h-3" />
+                                <span>Call Now</span>
+                              </button>
+                            </div>
+
+                            {/* Additional Actions */}
+                            <div className="space-y-2 px-1">
+                              <button className="w-full border border-purple-200 bg-purple-50 text-purple-700 py-2 rounded-lg text-xs font-medium shadow-sm flex items-center justify-center space-x-1">
+                                <Globe className="w-3 h-3" />
+                                <span>Visit Website</span>
+                              </button>
+                              <button className="w-full border border-blue-200 bg-blue-50 text-blue-700 py-2 rounded-lg text-xs font-medium shadow-sm flex items-center justify-center space-x-1">
+                                <Star className="w-3 h-3" />
+                                <span>Leave Review</span>
+                              </button>
+                            </div>
+
+                            {/* Footer */}
+                            <div className="text-center mt-3 pt-2 border-t border-gray-200">
+                              <div className="flex items-center justify-center space-x-1">
+                                <div className="w-4 h-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-sm"></div>
+                                <span className="text-xs text-gray-500 font-medium">Powered by WeCard</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Connection Line */}
+                {isNearCard && (
+                  <div className="hidden md:block absolute top-1/2 -left-32 w-32 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse"></div>
+                )}
+              </div>
+            </div>
+
+            {/* Floating Elements */}
+            <div className="hidden md:block absolute top-10 left-10 opacity-30">
+              <div className="w-4 h-4 bg-purple-500 rounded-full animate-float"></div>
+            </div>
+            <div className="hidden md:block absolute bottom-10 right-10 opacity-30">
+              <div className="w-6 h-6 bg-blue-500 rounded-full animate-float delay-1000"></div>
+            </div>
+            <div className="hidden md:block absolute top-20 right-20 opacity-30">
+              <div className="w-3 h-3 bg-cyan-500 rounded-full animate-float delay-500"></div>
+            </div>
+          </div>
+
+          {/* Instructions */}
+          <div className="text-center mt-12">
+            <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10">
+              <h3 className="text-xl font-bold mb-2">Try the Demo!</h3>
+              <p className="text-gray-300 text-sm px-4">
+                Click on the WeCard to simulate an NFC tap and see the instant connection
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default InteractiveDemo;
                                 <Linkedin className="w-4 h-4 text-white" />
                               </div>
                               <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center shadow-md">
