@@ -92,9 +92,9 @@ const InteractiveDemo: React.FC = () => {
                 isNearCard ? 'scale-110 -rotate-12' : ''
               }`}
             >
-              <div className="relative">
+              <div className="relative -mt-2 md:mt-0">
                 {/* Phone Frame */}
-                <div className="w-40 h-64 md:w-48 md:h-80 bg-gray-900 rounded-3xl p-2 shadow-2xl border border-gray-700 -mt-2 md:mt-0">
+                <div className="w-40 h-64 md:w-48 md:h-80 bg-gray-900 rounded-3xl p-2 shadow-2xl border border-gray-700">
                   <div className="w-full h-full bg-black rounded-2xl relative overflow-hidden">
                     
                     {/* Phone Screen - Default State */}
@@ -221,67 +221,6 @@ const InteractiveDemo: React.FC = () => {
                                 <div className="w-4 h-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-sm"></div>
                                 <span className="text-xs text-gray-500 font-medium">Powered by WeCard</span>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Connection Line */}
-                {isNearCard && (
-                  <div className="hidden md:block absolute top-1/2 -left-32 w-32 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse"></div>
-                )}
-              </div>
-            </div>
-
-            {/* Floating Elements */}
-            <div className="hidden md:block absolute top-10 left-10 opacity-30">
-              <div className="w-4 h-4 bg-purple-500 rounded-full animate-float"></div>
-            </div>
-            <div className="hidden md:block absolute bottom-10 right-10 opacity-30">
-              <div className="w-6 h-6 bg-blue-500 rounded-full animate-float delay-1000"></div>
-            </div>
-            <div className="hidden md:block absolute top-20 right-20 opacity-30">
-              <div className="w-3 h-3 bg-cyan-500 rounded-full animate-float delay-500"></div>
-            </div>
-          </div>
-
-          {/* Instructions */}
-          <div className="text-center mt-12">
-            <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10">
-              <h3 className="text-xl font-bold mb-2">Try the Demo!</h3>
-              <p className="text-gray-300 text-sm px-4">
-                Click on the WeCard to simulate an NFC tap and see the instant connection
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default InteractiveDemo;
-                                <Linkedin className="w-4 h-4 text-white" />
-                              </div>
-                              <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center shadow-md">
-                                <Instagram className="w-4 h-4 text-white" />
-                              </div>
-                              <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center shadow-md">
-                                <Globe className="w-4 h-4 text-white" />
-                              </div>
-                            </div>
-
-                            {/* Action Buttons */}
-                            <div className="space-y-2 px-2">
-                              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-2 rounded-lg text-xs font-semibold shadow-lg">
-                                Save Contact
-                              </button>
-                              <button className="w-full border border-gray-300 py-2 rounded-lg text-xs bg-white shadow-md">
-                                View Portfolio
-                              </button>
                             </div>
                           </div>
                         </div>
