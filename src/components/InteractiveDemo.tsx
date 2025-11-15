@@ -7,22 +7,24 @@ const InteractiveDemo: React.FC = () => {
   const [animationStep, setAnimationStep] = useState(0);
 
   const handleCardTap = () => {
-    setIsNearCard(true);
-    setAnimationStep(1);
-    
-    // Simulate NFC connection sequence
-    setTimeout(() => setAnimationStep(2), 500);
-    setTimeout(() => setAnimationStep(3), 1000);
-    setTimeout(() => {
-      setShowProfile(true);
-      setAnimationStep(4);
-    }, 1500);
-  };
-
-  const resetDemo = () => {
-    setIsNearCard(false);
-    setShowProfile(false);
-    setAnimationStep(0);
+    if (showProfile) {
+      // Reset the demo if profile is already showing
+      setIsNearCard(false);
+      setShowProfile(false);
+      setAnimationStep(0);
+    } else {
+      // Start the demo sequence
+      setIsNearCard(true);
+      setAnimationStep(1);
+      
+      // Simulate NFC connection sequence
+      setTimeout(() => setAnimationStep(2), 500);
+      setTimeout(() => setAnimationStep(3), 1000);
+      setTimeout(() => {
+        setShowProfile(true);
+        setAnimationStep(4);
+      }, 1500);
+    }
   };
 
   return (
@@ -37,12 +39,6 @@ const InteractiveDemo: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             See how WeCard transforms networking with a simple tap
           </p>
-          <button 
-            onClick={resetDemo}
-            className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
-          >
-            Reset Demo
-          </button>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
@@ -80,7 +76,7 @@ const InteractiveDemo: React.FC = () => {
               {!isNearCard && (
                 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-center md:block hidden">
                   <div className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-gray-300 animate-pulse">
-                    Tap to connect
+                    {showProfile ? 'Tap to reset' : 'Tap to connect'}
                   </div>
                 </div>
               )}
@@ -253,7 +249,10 @@ const InteractiveDemo: React.FC = () => {
             <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10">
               <h3 className="text-xl font-bold mb-2">Try the Demo!</h3>
               <p className="text-gray-300 text-sm px-4">
-                Click on the WeCard to simulate an NFC tap and see the instant connection
+                {showProfile 
+                  ? 'Tap the WeCard again to reset the demo' 
+                  : 'Tap the WeCard to simulate an NFC connection and see the instant profile loading'
+                }
               </p>
             </div>
           </div>
