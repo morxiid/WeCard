@@ -1,10 +1,45 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const FAQ: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [openFAQ, setOpenFAQ] = useState<number | null>(0);
 
-  const faqs = [
+  const faqs = i18n.language === 'fr' ? [
+    {
+      question: "Comment fonctionne la technologie NFC avec WeCard ?",
+      answer: "Le NFC permet à votre WeCard de se connecter instantanément à n'importe quel smartphone par simple contact. Pas d'application requise, votre profil s'ouvre automatiquement."
+    },
+    {
+      question: "Puis-je modifier mes infos après avoir reçu ma carte ?",
+      answer: "Oui ! Vous pouvez mettre à jour vos informations à tout moment via notre dashboard en ligne. Les changements sont immédiats."
+    },
+    {
+      question: "Faut-il installer une application ?",
+      answer: "Non, aucune application n'est nécessaire. Un simple scan ou contact suffit pour afficher votre profil sur n'importe quel smartphone."
+    },
+    {
+      question: "Quelle différence entre Personnel et Professionnel ?",
+      answer: "Les cartes Personnel ont le logo WeCard. Les cartes Professionnel sont 100% personnalisables avec votre logo et vos couleurs."
+    },
+    {
+      question: "Comment marche la Google Review Card ?",
+      answer: "Elle dirige vos clients directement vers votre page d'avis Google pour booster votre réputation en ligne facilement."
+    },
+    {
+      question: "Mes données sont-elles sécurisées ?",
+      answer: "Oui, la sécurité est notre priorité. Vos données sont cryptées et vous contrôlez ce que vous partagez."
+    },
+    {
+      question: "Quelle est la durée de vie d'une WeCard ?",
+      answer: "Nos cartes sont conçues pour durer des années. La puce NFC est robuste et la carte est fabriquée en matériaux durables."
+    },
+    {
+      question: "Puis-je suivre mes statistiques ?",
+      answer: "Oui, les cartes Pro et Google Review incluent un dashboard pour suivre les vues et l'engagement de votre profil."
+    }
+  ] : [
     {
       question: "How does NFC technology work with WeCard?",
       answer: "NFC (Near Field Communication) allows your WeCard to instantly connect with any NFC-enabled smartphone when tapped. No apps are required - the phone automatically opens your profile page with all your information, links, and contact details."
@@ -42,14 +77,14 @@ const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-20 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-900/10 to-black"></div>
-      
+
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Frequently Asked <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Questions</span>
+            {t('faq.title')} <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">{t('faq.titleSpan')}</span>
           </h2>
           <p className="text-xl text-gray-300">
-            Everything you need to know about WeCard and NFC technology
+            {t('faq.subtitle')}
           </p>
         </div>
 
@@ -72,12 +107,11 @@ const FAQ: React.FC = () => {
                   )}
                 </div>
               </button>
-              
-              <div className={`transition-all duration-500 ease-in-out ${
-                openFAQ === index 
-                  ? 'max-h-96 opacity-100' 
-                  : 'max-h-0 opacity-0'
-              } overflow-hidden`}>
+
+              <div className={`transition-all duration-500 ease-in-out ${openFAQ === index
+                ? 'max-h-96 opacity-100'
+                : 'max-h-0 opacity-0'
+                } overflow-hidden`}>
                 <div className="px-6 pb-6">
                   <div className="pt-2 border-t border-white/10">
                     <p className="text-gray-300 leading-relaxed mt-4">
@@ -93,10 +127,10 @@ const FAQ: React.FC = () => {
         {/* Contact support */}
         <div className="text-center mt-12">
           <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10">
-            <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
-            <p className="text-gray-300 mb-4">Our support team is here to help you get started</p>
+            <h3 className="text-xl font-bold mb-2">{t('faq.stillQuestions')}</h3>
+            <p className="text-gray-300 mb-4">{t('faq.supportDesc')}</p>
             <button className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/50 px-6 py-2 rounded-full hover:from-purple-500 hover:to-blue-500 transition-all duration-300">
-              Contact Support
+              {t('faq.contactSupport')}
             </button>
           </div>
         </div>

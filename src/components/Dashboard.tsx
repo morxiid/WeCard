@@ -1,23 +1,25 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, BarChart3, Settings, Users, Zap, Shield, Globe } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="dashboard" className="py-20 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/10 to-black"></div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Powerful <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Dashboard</span>
+            {t('dashboard.title')} <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{t('dashboard.titleSpan')}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Manage your WeCard profile, track engagement, and analyze your networking success with our comprehensive dashboard
+            {t('dashboard.subtitle')}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Side - Features and Explanations */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -26,8 +28,8 @@ const Dashboard: React.FC = () => {
                   <BarChart3 className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Real-Time Analytics</h3>
-                  <p className="text-gray-300">Track profile views, engagement rates, and connection success. See which content performs best and optimize your networking strategy.</p>
+                  <h3 className="text-xl font-bold mb-2">{t('dashboard.analytics.title')}</h3>
+                  <p className="text-gray-300">{t('dashboard.analytics.desc')}</p>
                 </div>
               </div>
 
@@ -36,8 +38,8 @@ const Dashboard: React.FC = () => {
                   <Settings className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Easy Profile Management</h3>
-                  <p className="text-gray-300">Update your information, links, and media instantly. Changes reflect immediately across all your distributed cards.</p>
+                  <h3 className="text-xl font-bold mb-2">{t('dashboard.management.title')}</h3>
+                  <p className="text-gray-300">{t('dashboard.management.desc')}</p>
                 </div>
               </div>
 
@@ -46,8 +48,8 @@ const Dashboard: React.FC = () => {
                   <Users className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Contact Organization</h3>
-                  <p className="text-gray-300">Organize and export your growing network. Keep track of connections and follow up with potential clients.</p>
+                  <h3 className="text-xl font-bold mb-2">{t('dashboard.organization.title')}</h3>
+                  <p className="text-gray-300">{t('dashboard.organization.desc')}</p>
                 </div>
               </div>
             </div>
@@ -55,67 +57,51 @@ const Dashboard: React.FC = () => {
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 rounded-xl bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-white/10">
                 <Zap className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
-                <div className="text-sm font-semibold">Instant Updates</div>
+                <div className="text-sm font-semibold">{t('dashboard.stats.updates')}</div>
               </div>
               <div className="text-center p-4 rounded-xl bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-white/10">
                 <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <div className="text-sm font-semibold">Secure & Private</div>
+                <div className="text-sm font-semibold">{t('dashboard.stats.secure')}</div>
               </div>
               <div className="text-center p-4 rounded-xl bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-white/10">
                 <Globe className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <div className="text-sm font-semibold">Global Access</div>
+                <div className="text-sm font-semibold">{t('dashboard.stats.global')}</div>
               </div>
             </div>
 
             <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center space-x-2">
-              <a href="https://e-card.space/">
-              <span>Explore Full Dashboard</span>
-                </a>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <a href="https://e-card.space/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 w-full h-full">
+                <span>{t('dashboard.cta')}</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </button>
           </div>
 
-          {/* Right Side - Dashboard Screenshots Placeholder */}
-          <div className="relative">
-            <div className="space-y-8">
-              {/* Desktop Dashboard Placeholder */}
-              <div className="relative">
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-4">
-                  <div className="bg-gray-800 rounded-t-2xl p-2">
-                    <div className="bg-black rounded-xl aspect-video flex items-center justify-center border border-gray-700 relative overflow-hidden">
-                      {/* Placeholder for desktop dashboard screenshot */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20"></div>
-                      <div className="relative z-10 text-center p-8">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                          <BarChart3 className="w-8 h-8" />
-                        </div>
-                        <h4 className="text-lg font-semibold mb-2">Desktop Dashboard</h4>
-                        <p className="text-gray-400 text-sm">Replace with actual screenshot</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-gray-700 h-6 rounded-b-2xl relative">
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-2 bg-gray-600 rounded-t-lg"></div>
-                  </div>
+          {/* Right Side - Ecosystem Mockup */}
+          <div className="relative group cursor-pointer" onClick={() => window.open('https://e-card.space/morchiid', '_blank')}>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl opacity-50"></div>
+              <img
+                src="/assets/phone_laptop_mockup.png"
+                alt="WeCard Ecosystem Mockup"
+                className="relative z-10 w-full h-auto rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-white/20 backdrop-blur-md p-4 rounded-full border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                  <ArrowRight className="w-8 h-8 text-white" />
                 </div>
               </div>
+            </div>
 
-              {/* Mobile Dashboard Placeholder */}
-              <div className="flex justify-center">
-                <div className="relative max-w-xs">
-                  <div className="bg-gray-900 rounded-3xl p-2 shadow-2xl border border-gray-700">
-                    <div className="bg-black rounded-2xl aspect-[9/16] flex items-center justify-center relative overflow-hidden">
-                      {/* Placeholder for mobile dashboard screenshot */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20"></div>
-                      <div className="relative z-10 text-center p-6">
-                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl mx-auto mb-3 flex items-center justify-center">
-                          <Settings className="w-6 h-6" />
-                        </div>
-                        <h4 className="text-sm font-semibold mb-2">Mobile Dashboard</h4>
-                        <p className="text-gray-400 text-xs">Replace with actual screenshot</p>
-                      </div>
-                    </div>
-                  </div>
+            {/* Overlay Stats/features to make it more "active" */}
+            <div className="absolute -bottom-8 -right-8 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hidden md:block animate-float">
+              <div className="flex items-center space-x-3">
+                <div className="p-2 bg-green-500/20 rounded-lg">
+                  <BarChart3 className="w-6 h-6 text-green-500" />
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400">{t('testimonials.statViews')}</div>
+                  <div className="text-lg font-bold">{t('dashboard.stats_values.views')}</div>
                 </div>
               </div>
             </div>

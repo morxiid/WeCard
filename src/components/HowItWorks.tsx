@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Smartphone, UserCheck, RotateCcw } from 'lucide-react';
 
 const HowItWorks: React.FC = () => {
+  const { t } = useTranslation();
   const [visibleSteps, setVisibleSteps] = useState<boolean[]>([false, false, false]);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -28,20 +30,20 @@ const HowItWorks: React.FC = () => {
   const steps = [
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: "Tap to Connect",
-      description: "Simply tap your WeCard against any smartphone. No apps needed - NFC technology does the rest instantly.",
+      title: t('howItWorks.step1.title'),
+      description: t('howItWorks.step1.description'),
       color: "from-purple-500 to-blue-500"
     },
     {
       icon: <UserCheck className="w-8 h-8" />,
-      title: "Profile Opens Instantly",
-      description: "Your complete profile appears instantly with contact info, services, social media, and portfolio links.",
+      title: t('howItWorks.step2.title'),
+      description: t('howItWorks.step2.description'),
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <RotateCcw className="w-8 h-8" />,
-      title: "Update Anytime",
-      description: "Change your information anytime from our dashboard. No reprints needed - your card updates automatically.",
+      title: t('howItWorks.step3.title'),
+      description: t('howItWorks.step3.description'),
       color: "from-cyan-500 to-purple-500"
     }
   ];
@@ -49,14 +51,14 @@ const HowItWorks: React.FC = () => {
   return (
     <section id="how-it-works" ref={sectionRef} className="py-20 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-900/10 to-black"></div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            How <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">WeCard Works</span>
+            {t('howItWorks.title')} <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">{t('howItWorks.titleSpan')}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Three simple steps to revolutionize how you share your professional information
+            {t('howItWorks.subtitle')}
           </p>
         </div>
 
@@ -64,11 +66,10 @@ const HowItWorks: React.FC = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`text-center transition-all duration-700 ${
-                visibleSteps[index] 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-10'
-              }`}
+              className={`text-center transition-all duration-700 ${visibleSteps[index]
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-10'
+                }`}
             >
               {/* Step number and icon */}
               <div className="relative mb-8">
@@ -94,20 +95,6 @@ const HowItWorks: React.FC = () => {
           <div className="absolute top-1/2 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent transform -translate-y-1/2"></div>
           <div className="absolute top-1/2 left-1/2 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent transform -translate-y-1/2"></div>
         </div>
-
-        {/* Demo mockup */}
-        <div className="text-center mt-16">
-        <div className="relative w-full max-w-3xl aspect-video mx-auto">
-          <iframe
-            src="https://youtu.be/pX_TaoV6azw?list=RDpX_TaoV6azw"
-            title="WeCard Demo Video"
-            className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-      </div>
       </div>
     </section>
   );
