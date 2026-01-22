@@ -129,9 +129,11 @@ const FAQ: React.FC = () => {
           <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10">
             <h3 className="text-xl font-bold mb-2">{t('faq.stillQuestions')}</h3>
             <p className="text-gray-300 mb-4">{t('faq.supportDesc')}</p>
-            <button className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/50 px-6 py-2 rounded-full hover:from-purple-500 hover:to-blue-500 transition-all duration-300">
-              {t('faq.contactSupport')}
-            </button>
+            <a href="https://wa.me/212681784088" target='_blank'>
+              <button className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/50 px-6 py-2 rounded-full hover:from-purple-500 hover:to-blue-500 transition-all duration-300">
+                {t('faq.contactSupport')}
+              </button>
+            </a>
           </div>
         </div>
       </div>
