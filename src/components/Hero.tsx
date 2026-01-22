@@ -156,13 +156,14 @@ const Hero: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </a>
-
-              <button className="flex items-center justify-center space-x-3 px-8 py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md group text-center">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Play className="w-4 h-4 text-white fill-white" />
-                </div>
-                <span className="font-semibold">{t('hero.ctaSecondary')}</span>
-              </button>
+              <a href="#demo">
+                <button className="flex items-center justify-center space-x-3 px-8 py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md group text-center">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                    <Play className="w-4 h-4 text-white fill-white" />
+                  </div>
+                  <span className="font-semibold">{t('hero.ctaSecondary')}</span>
+                </button>
+              </a>
             </div>
 
             {/* Trust Bar (Social Proof) */}
