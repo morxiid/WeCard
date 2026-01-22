@@ -30,7 +30,7 @@ const InteractiveDemo: React.FC = () => {
   };
 
   return (
-    <section className="py-20 px-6 relative overflow-hidden">
+    <section id='demo' className="py-20 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-900/20 to-black"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
