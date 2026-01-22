@@ -8,44 +8,44 @@ const Testimonials: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: i18n.language === 'fr' ? "Directrice Marketing" : "Marketing Director",
-      company: "TechFlow Inc.",
+      name: "Amine Belkhayat",
+      role: i18n.language === 'fr' ? "Fondateur, Tech-Innov" : "Founder, Tech-Innov",
+      company: "Casablanca",
       content: i18n.language === 'fr'
-        ? "WeCard a transformé notre networking. La connexion instantanée fait toute la différence lors des conférences."
-        : "WeCard completely transformed how we network at conferences. The instant connection and professional presentation made a huge difference in lead generation.",
+        ? "WeCard a révolutionné ma façon de networker à Casablanca. Plus besoin de transporter des piles de cartes, un simple tap suffit."
+        : "WeCard has revolutionized the way I network in Casablanca. No more carrying stacks of paper cards, a simple tap is all it takes.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
-      name: "Michael Chen",
-      role: i18n.language === 'fr' ? "Agent Immobilier" : "Real Estate Agent",
-      company: "Premium Properties",
+      name: "Laila Mansouri",
+      role: i18n.language === 'fr' ? "Consultante en Stratégie" : "Strategy Consultant",
+      company: "Rabat",
       content: i18n.language === 'fr'
-        ? "La Google Review Card change tout ! Mes clients laissent des avis en un clic, ma réputation s'envole."
-        : "The Google Review Card is a game-changer! My clients can leave reviews instantly, and my online reputation has improved dramatically.",
+        ? "L'élégance de la carte noire WeCard fait toujours sensation lors de mes rendez-vous d'affaires. C'est un véritable atout professionnel."
+        : "The elegance of the black WeCard always makes an impression during my business meetings. It's a real professional asset.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      avatar: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
-      name: "Emily Rodriguez",
-      role: i18n.language === 'fr' ? "Designer Freelance" : "Freelance Designer",
-      company: "Creative Studios",
+      name: "Youssef Benjelloun",
+      role: i18n.language === 'fr' ? "Directeur de Restaurant" : "Restaurant Manager",
+      company: "Marrakech",
       content: i18n.language === 'fr'
-        ? "J'adore mettre à jour mes liens instantanément. Plus besoin de cartes papier dépassées."
-        : "I love how I can update my portfolio links instantly. No more carrying outdated business cards - WeCard keeps everything current automatically.",
+        ? "La Google Review Card nous a aidés à doubler nos avis positifs en moins d'un mois. Incontournable pour tout commerce au Maroc."
+        : "The Google Review Card helped us double our positive reviews in less than a month. Essential for any business in Morocco.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
-      name: "David Park",
-      role: i18n.language === 'fr' ? "Responsable Ventes" : "Sales Manager",
-      company: "Global Solutions",
+      name: "Med El Morchid",
+      role: i18n.language === 'fr' ? "Entrepreneur" : "Entrepreneur",
+      company: "Marrakesh",
       content: i18n.language === 'fr'
-        ? "Les analyses m'aident à suivre mes meilleurs contacts. C'est un véritable outil CRM portable."
-        : "The analytics feature helps me track which connections are most engaged. It's like having a CRM system built into my business card.",
+        ? "Mes clients adorent la facilité du transfert de contact. C'est l'image de modernité que je veux projeter pour mon agence."
+        : "My clients love how easy it is to transfer contact info. It's the modern image I want to project for my agency.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      avatar: "https://scontent.frak2-1.fna.fbcdn.net/v/t39.30808-1/329329389_932333334846559_6898754381580771340_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeGPczmUEpr-0Yh7r67sFqH60A0vIDeUCcXQDS8gN5QJxVq5LVoIO_drmv0KcG3e0ZEVdqxPPIHdqu3YyQ4SkvEK&_nc_ohc=mC9qOqEfSZwQ7kNvwG6apeY&_nc_oc=AdlvhYjTt6e2nl99AmziLh-hxuPkQGaghqhLTbVNBhI6W3kCWlBibEfMTKbU01xev6Y&_nc_zt=24&_nc_ht=scontent.frak2-1.fna&_nc_gid=s-Hp-F7bNZmCQkm-_W2lJA&oh=00_Afp3vGq4e8GkX1tVV96_9WmlDjVvk3W4JxC3SAfxLqxnbA&oe=6975D974"
     }
   ];
 
@@ -116,8 +116,8 @@ const Testimonials: React.FC = () => {
               key={index}
               onClick={() => setCurrentTestimonial(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500'
-                  : 'bg-white/20 hover:bg-white/40'
+                ? 'bg-gradient-to-r from-purple-500 to-blue-500'
+                : 'bg-white/20 hover:bg-white/40'
                 }`}
             />
           ))}
