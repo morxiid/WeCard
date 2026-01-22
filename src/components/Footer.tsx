@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 mb-4 md:mb-0">
-            © 2025 WeCard. {t('footer.allRights')}
+            © 2026 WeCard. {t('footer.allRights')}
           </div>
           <div className="flex space-x-6 text-gray-400">
             <a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a>
