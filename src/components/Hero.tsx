@@ -166,17 +166,8 @@ const Hero: React.FC = () => {
               </a>
             </div>
 
-            {/* Trust Bar (Social Proof) */}
-            <div className="reveal-down border-t border-white/10 pt-10">
-              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">{i18n.language === 'fr' ? 'COMPATIBLE AVEC' : 'COMPATIBLE WITH'}</p>
-              <div className="flex flex-wrap gap-8 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-                <div className="flex items-center space-x-2 hover:opacity-100"><Globe size={20} /> <span className="text-sm font-semibold">Any Browser</span></div>
-                <div className="flex items-center space-x-2 hover:opacity-100"><Smartphone size={20} /> <span className="text-sm font-semibold">iOS & Android</span></div>
-                <div className="flex items-center space-x-2 hover:opacity-100"><ShieldCheck size={20} /> <span className="text-sm font-semibold">NFC Security</span></div>
-                <div className="flex items-center space-x-2 hover:opacity-100"><Zap size={20} /> <span className="text-sm font-semibold">Zero Delay</span></div>
-              </div>
-            </div>
           </div>
+
 
           {/* Right Column: Visual */}
           <div className="relative flex justify-center items-center">
@@ -246,6 +237,49 @@ const Hero: React.FC = () => {
                   <Facebook className="text-blue-600 w-8 h-8" />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Bar (Social Proof) - Centered and Larger */}
+        <div className="reveal-down mt-24 border-t border-white/10 pt-12 overflow-hidden w-full">
+          <p className="text-center text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-12">{i18n.language === 'fr' ? 'ILS NOUS FONT CONFIANCE' : 'TRUSTED BY LEADING COMPANIES'}</p>
+
+          <div className="relative flex items-center max-w-5xl mx-auto">
+            <div className="animate-ticker space-x-16 md:space-x-24 items-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+
+              {[
+                'afrikaformwork.png',
+                'cézanne.png',
+                'hotairballoon.png',
+                'litalien.png',
+                'prestigieux.png',
+                'solvoyages.webp',
+              ].map((logo, index) => (
+                <img
+                  key={`logo-1-${index}`}
+                  src={`/assets/clientLogo/${logo}`}
+                  alt="Client Logo"
+                  className="h-10 md:h-16 w-auto object-contain flex-shrink-0 transition-transform duration-500 hover:scale-110"
+                />
+              ))}
+              {/* Duplicate for seamless loop */}
+              {[
+                'afrikaformwork.png',
+                'cézanne.png',
+                'hotairballoon.png',
+                'litalien.png',
+                'prestigieux.png',
+                'solvoyages.webp',
+                'vandb.png'
+              ].map((logo, index) => (
+                <img
+                  key={`logo-2-${index}`}
+                  src={`/assets/clientLogo/${logo}`}
+                  alt="Client Logo"
+                  className="h-10 md:h-16 w-auto object-contain flex-shrink-0 transition-transform duration-500 hover:scale-110"
+                />
+              ))}
             </div>
           </div>
         </div>
