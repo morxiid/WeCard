@@ -8,44 +8,44 @@ const Testimonials: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Amine Belkhayat",
-      role: i18n.language === 'fr' ? "Fondateur, Tech-Innov" : "Founder, Tech-Innov",
+      name: "Olmqadem Youssef",
+      role: i18n.language === 'fr' ? "Agent Immobilier" : "Real Estate Agent",
       company: "Casablanca",
       content: i18n.language === 'fr'
-        ? "WeCard a révolutionné ma façon de networker à Casablanca. Plus besoin de transporter des piles de cartes, un simple tap suffit."
-        : "WeCard has revolutionized the way I network in Casablanca. No more carrying stacks of paper cards, a simple tap is all it takes.",
+        ? "WeCard a révolutionné ma façon de networker à Marrakech. Plus besoin de transporter des piles de cartes, un simple tap suffit."
+        : "WeCard has revolutionized the way I network in Marrakech. No more carrying stacks of paper cards, a simple tap is all it takes.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      avatar: "https://res.cloudinary.com/ducavbt2e/image/upload/v1771097861/yosf_xb0txc.jpg"
     },
     {
-      name: "Laila Mansouri",
-      role: i18n.language === 'fr' ? "Consultante en Stratégie" : "Strategy Consultant",
-      company: "Rabat",
+      name: "Salim Mrini",
+      role: i18n.language === 'fr' ? "Entrepreneur" : "Entrepreneur",
+      company: "Maroc en sac a dos",
       content: i18n.language === 'fr'
         ? "L'élégance de la carte noire WeCard fait toujours sensation lors de mes rendez-vous d'affaires. C'est un véritable atout professionnel."
         : "The elegance of the black WeCard always makes an impression during my business meetings. It's a real professional asset.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      avatar: "https://res.cloudinary.com/ducavbt2e/image/upload/v1771097399/611702233_18554634814044345_1569636715753984260_n_xavxmw.jpg"
     },
     {
-      name: "Youssef Benjelloun",
-      role: i18n.language === 'fr' ? "Directeur de Restaurant" : "Restaurant Manager",
-      company: "Marrakech",
+      name: "Marwan El Moutawkil",
+      role: i18n.language === 'fr' ? "Clothing Brand Founder" : "Clothing Brand Founder",
+      company: "Brikka Brand",
       content: i18n.language === 'fr'
-        ? "La Google Review Card nous a aidés à doubler nos avis positifs en moins d'un mois. Incontournable pour tout commerce au Maroc."
-        : "The Google Review Card helped us double our positive reviews in less than a month. Essential for any business in Morocco.",
+        ? "WeCard a totalement amélioré ma façon de réseauter en tant que fondateur d’une marque de vêtements. C’est rapide, moderne et très professionnel. Un simple tap et toutes mes infos sont partagées instantanément. Simple, intelligent et efficace."
+        : "WeCard completely upgraded the way I network as a clothing brand owner. It’s fast, modern, and very professional. One tap and all my brand info is shared instantly. Simple, smart, and powerful.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      avatar: "https://res.cloudinary.com/ducavbt2e/image/upload/v1771097118/WhatsApp_Image_2026-02-14_at_20.23.47_vz0uhw.jpg"
     },
     {
       name: "Med El Morchid",
       role: i18n.language === 'fr' ? "Entrepreneur" : "Entrepreneur",
-      company: "Marrakesh",
+      company: "RedCity Digital",
       content: i18n.language === 'fr'
         ? "Mes clients adorent la facilité du transfert de contact. C'est l'image de modernité que je veux projeter pour mon agence."
         : "My clients love how easy it is to transfer contact info. It's the modern image I want to project for my agency.",
       rating: 5,
-      avatar: "https://scontent.frak2-1.fna.fbcdn.net/v/t39.30808-1/329329389_932333334846559_6898754381580771340_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeGPczmUEpr-0Yh7r67sFqH60A0vIDeUCcXQDS8gN5QJxVq5LVoIO_drmv0KcG3e0ZEVdqxPPIHdqu3YyQ4SkvEK&_nc_ohc=mC9qOqEfSZwQ7kNvwG6apeY&_nc_oc=AdlvhYjTt6e2nl99AmziLh-hxuPkQGaghqhLTbVNBhI6W3kCWlBibEfMTKbU01xev6Y&_nc_zt=24&_nc_ht=scontent.frak2-1.fna&_nc_gid=s-Hp-F7bNZmCQkm-_W2lJA&oh=00_Afp3vGq4e8GkX1tVV96_9WmlDjVvk3W4JxC3SAfxLqxnbA&oe=6975D974"
+      avatar: "https://res.cloudinary.com/ducavbt2e/image/upload/v1771096944/329329389_932333334846559_6898754381580771340_n_ayg7qz.jpg"
     }
   ];
 
@@ -127,7 +127,7 @@ const Testimonials: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 text-center">
           <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10">
             <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
-              7,500+
+              1,200+
             </div>
             <div className="text-gray-300">{t('testimonials.statCards')}</div>
           </div>
