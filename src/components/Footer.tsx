@@ -164,7 +164,7 @@ const Footer: React.FC = () => {
           <div className="flex space-x-6 text-gray-400">
             <a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-purple-400 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-purple-400 transition-colors">Support</a>
+            <a href="https://wa.me/212681784088" className="hover:text-purple-400 transition-colors">Support</a>
           </div>
         </div>
       </div>
